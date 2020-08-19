@@ -1,0 +1,19 @@
+name: "teaching-in-production"
+title: "RStudio Education"
+favicon: images/favicon.ico
+description: |
+  Invited session for Day 2 of the RStudio Instructor Training and Certification Program.
+output_dir: "docs"
+creative_commons: CC BY-SA
+repository_url: https://github.com/rstudio-education/teaching-in-production
+navbar:
+  logo:
+    image: images/logo.png
+    href: https://www.rstudio.com
+  right:
+    - icon: fab fa-github
+      href: https://github.com/rstudio-education/teaching-in-production
+output: 
+  distill::distill_article:
+    toc: true
+    css: styles.css

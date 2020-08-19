@@ -1,0 +1,28 @@
+---
+title: "Teaching in Production"
+description: |
+  Day 2 of the RStudio Instructor Training and Certification Program.
+author:
+  - name: Alison Hill, Ph.D.
+    url: https://alison.rbind.io
+    affiliation: RStudio
+    affiliation_url: https://rstudio.com
+date: "`r Sys.Date()`"
+site: 
+  distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Welcome  
+
+These are the materials for an invited session for Day 2 of the RStudio Instructor Training and Certification Program, by Dr. Alison Presmanes Hill.
+
+\
+
+## Links
+
++ [Slides]()
++ [Website](rstd.io/tip)
