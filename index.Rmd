@@ -25,4 +25,4 @@ These are the materials for an invited session for Day 3 of the RStudio Instruct
 ## Links
 
 + [Slides]()
-+ [Website](rstd.io/tip)
++ [Website](https://rstd.io/tip)
