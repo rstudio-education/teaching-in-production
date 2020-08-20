@@ -47,8 +47,15 @@ install.packages(c("xaringan", "distill", "palmerpenguins"))
 
 ## Links
 
++ Link to this website: <https://rstd.io/tip>
+
 + [Slides](slides/index.html)
-+ [Website](https://rstd.io/tip)
+
+```{r}
+knitr::include_url("slides/index.html")
+```
+
+
 
 ## Acknowledgments {.appendix}
 

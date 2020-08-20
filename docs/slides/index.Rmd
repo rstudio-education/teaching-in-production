@@ -1415,7 +1415,7 @@ name: goodbye
 class: right, bottom
 background-color: #e6f3fc
 background-image: url(images/rmarkdown_hedgehog.png)
-background-size: 30%
+background-size: 25%
 background-position: bottom left
 
 
