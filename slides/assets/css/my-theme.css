@@ -98,16 +98,9 @@ a:hover, a:active, a:focus {
 }
 
 .inverse .remark-inline-code {
-  color: #8be9fd;
+  color: #f37278;
 }
 
-.inverse a {
-  color: #fff;
-}
-
-.inverse a:hover {
-  color: #bed3ec;
-}
 
 
 /* Two-column layout */
@@ -176,7 +169,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 .title-slide {
   background-image: url(../../images/rmarkdown_hedgehog.png);
   background-position: 52% 5%;
-  background-size: 45%;
+  background-size: 43%;
   background-color: #e6f3fc;
 }
 
@@ -568,4 +561,8 @@ h4 {
 
 .title-slide .remark-slide-number .progress-bar-container {
   height: 0px;
+}
+
+hr {
+  color: #023d4d80;
 }

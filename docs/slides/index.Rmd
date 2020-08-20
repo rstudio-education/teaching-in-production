@@ -35,12 +35,6 @@ library(palmerpenguins)
 xaringanExtra::use_panelset()
 ```
 
-layout: true
-
-<a class="footer-link" href="https://rstd.io/tip">rstd.io/tip</a>
-
----
-
 class: title-slide, center, bottom
 
 # `r rmarkdown::metadata$title`
@@ -56,9 +50,14 @@ Welcome to the webinar on sharing on short notice
 Where we'll show you how to get your teaching materials online with R Markdown.
 
 ---
+layout: true
+
+<a class="footer-link" href="https://rstd.io/tip">rstd.io/tip</a>
+
+---
 name: clouds
 class: center, middle
-background-image: url(images/Clouds.jpg)
+background-image: url(images/clouds.jpg)
 background-size: cover
 
 ```{css, echo=FALSE}
@@ -82,7 +81,7 @@ meta() %>%
   ) %>% 
   meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
   meta_social(
-    title = "Teaching in producton",
+    title = "Teaching in production",
     url = "https://rstd.io/tip",
     image = "https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df",
     image_alt = "The first slide features a flying machine",
@@ -318,29 +317,73 @@ penguins %>%
 
 # Do you teach data visualization?
 
+.panelset[
+.panel[.panel-name[Pop quiz]
+
 .pull-left[
-```{r fig.show='hide'}
-ggplot(penguins, aes(x = species, 
-                     y = body_mass_g, 
-                     fill = species)) +
-  geom_boxplot()
+```{r stack-hist, warning=FALSE, message=FALSE, fig.show='hide'}
+# Histogram example: flipper length by species
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm)) +
+  geom_histogram(
+    aes(fill = species), 
+    alpha = 0.5) +
+  scale_fill_manual(values = c("darkorange","darkorchid","cyan4"))
 ```
 
 ]
-
---
 
 .pull-right[
-
-```{r}
-ggplot(penguins, aes(x = year, 
-                     y = body_mass_g, 
-                     colour = species,
-                     group = species)) +
-  geom_point()
+```{r dodge-hist, echo=FALSE, warning=FALSE, message=FALSE, out.width='80%'}
+# Histogram example: flipper length by species
+ggplot(data = penguins, 
+       aes(x = flipper_length_mm)) +
+  geom_histogram(
+    aes(fill = species), 
+    alpha = 0.5, 
+    position = "identity") + #<<
+  scale_fill_manual(values = c("darkorange","darkorchid","cyan4"))
 ```
 
 ]
+]
+
+.panel[.panel-name[Answer]
+
+.pull-left[
+```{r ref.label='stack-hist', fig.show='hide', warning=FALSE, message=FALSE}
+
+```
+
+
+]
+
+.pull-right[
+```{r ref.label='stack-hist', out.width='80%', echo=FALSE, warning=FALSE, message=FALSE}
+
+```
+]
+
+]
+
+.panel[.panel-name[Solution]
+
+.pull-left[
+```{r ref.label='dodge-hist', fig.show='hide', warning=FALSE, message=FALSE}
+
+```
+]
+
+.pull-right[
+```{r ref.label='dodge-hist', out.width='80%', echo=FALSE, warning=FALSE, message=FALSE}
+
+```
+]
+
+
+]
+]
+
 
 ---
 
@@ -415,14 +458,9 @@ flipper_hist
 
 ---
 
-code doesn't match plot
+# YAML
 
----
-
-you messed up your yaml
-
-
-
+![](images/yaml.png)
 
 ---
 class: left, middle
@@ -467,7 +505,7 @@ name: surprise3
 template: surprise2
 
 .pull-right[
-Are the same tools **you** can use to teach.
+are the same tools **you** can use to teach.
 ]
 
 ---
@@ -603,40 +641,117 @@ And I'm slide 2
 ]
 
 ---
+
+# Each slide has its own YAML
+
+.pull-left[
+Change slide properties with the `class` key:
+
++ top
++ bottom
++ middle
+
+<hr>
+
++ left
++ right
++ center
+
+<hr>
++ inverse
+
+]
+
+.pull-right[
+```
+---
+output: xaringan::moon_reader 
+---
+class: center, middle, inverse
+
+# Intro 
+
+Hello I'm **slide** 1
+
+---
+class: bottom, right
+
+# About *me*
+
+And I'm slide 2
+
+```
+]
+
+---
 class: inverse, center, middle
 
-## PRO-TIP: 
+# PRO-TIP: 
 
-## Leverage remark.js
+# Leverage remark.js
 
----
-
-sort of per slide YAML
+<https://arm.rbind.io/slides/xaringan.html#block1>
 
 ---
-name: pin
+class: inverse, middle, center
+background-color: #e6f3fc
 
-# Name your slides
+# xaringan demo
 
---
+---
+name: yt1
+class: inverse, middle
+background-color: #e6f3fc
 
-Why? Let's test it out!
+```{r include=FALSE}
+yt <- 0
+```
 
---
+# Your turn #`r (yt <- yt + 1)`
 
-I have slides named:
+Add content to your slide deck. Need some inspiration? Check out:
 
-+ [`hello`](#hello)
+<https://allisonhorst.github.io/palmerpenguins/articles/intro.html>
 
-+ [`goodbye`](#goodbye)
+Try:
 
++ Use my [YAML](#penguin-yaml)
++ Jumping to [named slides](https://arm.rbind.io/slides/xaringan.html#43) ([`hello`](#hello), [`goodbye`](#goodbye))
++ Present to each other with [keyboard shortcuts](https://arm.rbind.io/slides/xaringan.html#44)
++ [Incremental reveals](https://arm.rbind.io/slides/xaringan.html#61)
++ [Two columns](https://arm.rbind.io/slides/xaringan.html#66)
++ Highlight [code input](https://arm.rbind.io/slides/xaringan.html#78) or [output](https://arm.rbind.io/slides/xaringan.html#79)
+
+```{r echo=FALSE}
+countdown::countdown(minutes = 10)
+```
+
+---
+name: penguin-yaml
+
+Jump back to [Your turn #`r yt`](#yt1)
+
+```{r echo=FALSE}
+yml() %>% 
+  yml_title("Presenting the penguins") %>% 
+  yml_output(
+    xaringan::moon_reader(
+      css = c("default", "rladies", "rladies-fonts"),
+      nature = list(
+        highlightStyle = "github",
+        highlightLines = TRUE
+      )
+    )
+  ) %>% 
+  asis_yaml_output()
+```
 
 ---
 class: inverse, center, middle
 
-## PRO-TIP: 
+# PRO-TIP: 
 
-## Power up R Markdown and knitr
+# Power up R Markdown and knitr
 
 ---
 
@@ -767,6 +882,13 @@ yt <- 0
 \# Your turn \# `` `r
 (yt <- yt + 1)` ``
 
+Try this!
+
+\# Your turn \# `` `r
+(yt <- yt + 1)` ``
+
+Check this!
+
 ]
 
 .panel[.panel-name[What you see]
@@ -777,7 +899,30 @@ yt <- 0
 
 
 # Your turn # `r (yt <- yt + 1)`
+
+Try this!
+
+# Your turn # `r (yt <- yt + 1)`
+
+Check this!
 ]
+
+.panel[.panel-name[Example]
+
+.pull-left[
+```{r echo=FALSE}
+knitr::include_url("https://tmv.netlify.app/slides/01-model#28")
+```
+]
+
+.pull-right[
+```{r echo=FALSE}
+knitr::include_url("https://tmv.netlify.app/slides/01-model#33")
+```
+]
+
+]
+
 ]
 
 
@@ -852,9 +997,19 @@ params$wifi_pass` ``
 ]
 
 ---
-other packages:
+class: center, middle
 
-xaringanextra/flair/countdown/ymlthis
+# Packages that play well with xaringan
+
+`r emo::ji("package")` [xaringanthemer](https://pkg.garrickadenbuie.com/xaringanthemer/)
+
+`r emo::ji("package")` [xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/)
+
+`r emo::ji("package")` [countdown](https://pkg.garrickadenbuie.com/countdown/#1)
+
+`r emo::ji("package")` [flair](https://kbodwin.github.io/flair/index.html)
+
+`r emo::ji("package")` [ymlthis](https://ymlthis.r-lib.org/)
 
 ---
 background-image: url(images/ship.jpg)
@@ -933,6 +1088,10 @@ background-size: contain
   left: 310px;
   font-size: 1.3em;
 "> Why do you insist on <br> websites for teaching? </div>
+
+---
+background-image: url(images/fortify.jpg)
+background-size: cover
 
 ---
 class: middle, center
@@ -1190,6 +1349,25 @@ output: distill::distill_article #<<
 The YAML navbar keys here are all similar to what we used in an R Markdown site, with one important change:
 
 The output **must** specify that this is a Distill article.
+
+---
+class: inverse, middle, center
+background-color: #e6f3fc
+
+# distill demo
+
+---
+name: yt2
+class: inverse, middle
+background-color: #e6f3fc
+
+# Your turn #`r (yt <- yt + 1)`
+
+Let's add a xaringan slide deck to our distill site, and link to it from the `index.Rmd`.
+
+```{r echo=FALSE}
+countdown::countdown(minutes = 10)
+```
 
 ---
 background-image: url(images/ship.jpg)
