@@ -49,3 +49,7 @@ install.packages(c("xaringan", "distill", "palmerpenguins"))
 
 + [Slides]()
 + [Website](https://rstd.io/tip)
+
+## Acknowledgments {.appendix}
+
+This is website made with the [distill package](https://rstudio.github.io/distill/) and a custom theme by Alison Hill & [Desirée De Leon](https://desiree.rbind.io/).

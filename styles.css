@@ -151,6 +151,11 @@ d-appendix p {
 	font-size: 0.9rem;
 }
 
+d-appendix h3 + * {
+	margin-top: 1.5em !important;
+}
+
+
 /*----- COLORED LIST BULLET----*/
 
 d-article ul {
