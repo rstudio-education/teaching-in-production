@@ -76,15 +76,15 @@ background-size: cover
 library(metathis)
 meta() %>%
   meta_general(
-    description = "Make your teaching more robust & reproducible",
+    description = "Make your teaching more robust & reproducible with R Markdown",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
   meta_social(
     title = "Teaching in production",
     url = "https://rstd.io/tip",
-    image = "https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df",
-    image_alt = "The first slide features a flying machine",
+    image = "https://rstudio-education.github.io/teaching-in-production/images/logo.png",
+    image_alt = "R Markdown hedgehog by Allison Horst",
     og_type = "website",
     twitter_card_type = "summary_large_image"
   )
@@ -996,6 +996,40 @@ params$wifi_pass` ``
 
 ]
 
+
+---
+class: middle, center
+background-image: url("images/short1.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+**R Markdown tools** you can use to get your course materials...
+
+---
+class: middle, center
+background-image: url("images/short2.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+**online**...
+
+---
+class: middle, center
+background-image: url("images/short3.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+on **short notice**.
+
 ---
 class: center, middle
 
@@ -1010,6 +1044,8 @@ class: center, middle
 `r emo::ji("package")` [flair](https://kbodwin.github.io/flair/index.html)
 
 `r emo::ji("package")` [ymlthis](https://ymlthis.r-lib.org/)
+
+`r emo::ji("package")` [metathis](https://pkg.garrickadenbuie.com/metathis/)
 
 ---
 background-image: url(images/ship.jpg)
@@ -1145,32 +1181,6 @@ template: clouds
 
 And you can display reuse licenses for your educational content.
 
----
-## Build your site
-
-.left-column[
-
-```{r eval=FALSE}
-.
-├── DataViz.Rproj
-├── _site/ #<<
-├── _site.yml 
-└── index.Rmd 
-```
-]
-
-.right-column[
-<img src="images/build-distill.png" style="margin-top: -28px;">
-]
-
-
-???
-
-So now let's build a minimal Distill site of our own. 
-
-Just like we did with the R Markdown site, we use the build tab to knit all our files at once.
-
-This creates a `_site` folder for our HTML files.
 
 ---
 background-image: url(images/clouds.jpg)
@@ -1210,16 +1220,15 @@ Quick things to notice -- let's look inside.
 
 ---
 class: middle
-background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-image: url(images/hello-index.jpg)
 background-position: right
-background-size: contain
+background-size: 60%
 
 
 .left-column[
 ```{r eval=FALSE}
 .
 ├── DataViz.Rproj
-├── _site/
 ├── _site.yml 
 └── index.Rmd #<<
 ```
@@ -1234,11 +1243,6 @@ It will be the site's home page.
 Any existing R Markdown document you have will do.
 
 But there is one addition we make inside of this file. 
-
----
-name: index
-background-image: url(images/hello-index.jpg)
-background-size: 50%
 
 ---
 background-image: url(images/clouds.jpg)
@@ -1291,7 +1295,6 @@ background-size: contain
 ```{r eval=FALSE}
 .
 ├── DataViz.Rproj
-├── _site/
 ├── _site.yml #<<
 ├── index.Rmd
 ├── lab01.Rmd
@@ -1315,7 +1318,6 @@ background-size: cover
 ```{r eval=FALSE}
 .
 ├── DataViz.Rproj
-├── _site/
 ├── _site.yml #<<
 ├── index.Rmd
 ├── lab01.Rmd
@@ -1351,6 +1353,33 @@ The YAML navbar keys here are all similar to what we used in an R Markdown site,
 The output **must** specify that this is a Distill article.
 
 ---
+## Build your site
+
+.left-column[
+
+```{r eval=FALSE}
+.
+├── DataViz.Rproj
+├── _site/ #<<
+├── _site.yml 
+└── index.Rmd 
+```
+]
+
+.right-column[
+<img src="images/build-distill.png" style="margin-top: -28px;">
+]
+
+
+???
+
+So now let's build a minimal Distill site of our own. 
+
+Just like we did with the R Markdown site, we use the build tab to knit all our files at once.
+
+This creates a `_site` folder for our HTML files.
+
+---
 class: inverse, middle, center
 background-color: #e6f3fc
 
@@ -1361,12 +1390,26 @@ name: yt2
 class: inverse, middle
 background-color: #e6f3fc
 
-# Your turn #`r (yt <- yt + 1)`
+# Your turn # 2
 
-Let's add a xaringan slide deck to our distill site, and link to it from the `index.Rmd`.
+Let's add a xaringan slide deck to our distill site (see `_site.yml` below), and link to it from the `index.Rmd`.
 
 ```{r echo=FALSE}
-countdown::countdown(minutes = 10)
+yml_empty() %>% 
+  yml_site_opts(
+    output_dir = "docs",
+    include = "slides/"
+    ) %>% 
+  asis_yaml_output()
+```
+
+Do we have time? Are we feeling brave? Permission to deploy??
+
+
+
+
+```{r echo=FALSE}
+countdown::countdown(minutes = 15)
 ```
 
 ---

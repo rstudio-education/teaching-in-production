@@ -9,20 +9,20 @@
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <meta name="description" content="Make your teaching more robust &amp; reproducible"/>
+    <meta name="description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="generator" content="xaringan and remark.js"/>
     <meta name="github-repo" content="rstudio-education/teaching-in-production"/>
     <meta name="twitter:title" content="Teaching in production"/>
-    <meta name="twitter:description" content="Make your teaching more robust &amp; reproducible"/>
+    <meta name="twitter:description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="twitter:url" content="https://rstd.io/tip"/>
-    <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df"/>
-    <meta name="twitter:image:alt" content="The first slide features a flying machine"/>
+    <meta name="twitter:image:src" content="https://rstudio-education.github.io/teaching-in-production/images/logo.png"/>
+    <meta name="twitter:image:alt" content="R Markdown hedgehog by Allison Horst"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="og:title" content="Teaching in production"/>
-    <meta name="og:description" content="Make your teaching more robust &amp; reproducible"/>
+    <meta name="og:description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="og:url" content="https://rstd.io/tip"/>
-    <meta name="og:image" content="https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df"/>
-    <meta name="og:image:alt" content="The first slide features a flying machine"/>
+    <meta name="og:image" content="https://rstudio-education.github.io/teaching-in-production/images/logo.png"/>
+    <meta name="og:image:alt" content="R Markdown hedgehog by Allison Horst"/>
     <meta name="og:type" content="website"/>
     <meta name="og:locale" content="en_US"/>
     <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
@@ -721,7 +721,7 @@ Try:
 + [Two columns](https://arm.rbind.io/slides/xaringan.html#66)
 + Highlight [code input](https://arm.rbind.io/slides/xaringan.html#78) or [output](https://arm.rbind.io/slides/xaringan.html#79)
 
-<div class="countdown" id="timer_5f3e9a83" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5f3eb21d" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1000,6 +1000,40 @@ penguins-are-the-new-iris
 
 ]
 
+
+---
+class: middle, center
+background-image: url("images/short1.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+**R Markdown tools** you can use to get your course materials...
+
+---
+class: middle, center
+background-image: url("images/short2.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+**online**...
+
+---
+class: middle, center
+background-image: url("images/short3.jpg")
+background-size: cover
+
+# [Sharing on **short notice**](https://rstd.io/sharing)
+
+???
+
+on **short notice**.
+
 ---
 class: center, middle
 
@@ -1014,6 +1048,8 @@ class: center, middle
 📦 [flair](https://kbodwin.github.io/flair/index.html)
 
 📦 [ymlthis](https://ymlthis.r-lib.org/)
+
+📦 [metathis](https://pkg.garrickadenbuie.com/metathis/)
 
 ---
 background-image: url(images/ship.jpg)
@@ -1151,33 +1187,6 @@ template: clouds
 
 And you can display reuse licenses for your educational content.
 
----
-## Build your site
-
-.left-column[
-
-
-```r
-.
-├── DataViz.Rproj
-*├── _site/
-├── _site.yml 
-└── index.Rmd 
-```
-]
-
-.right-column[
-&lt;img src="images/build-distill.png" style="margin-top: -28px;"&gt;
-]
-
-
-???
-
-So now let's build a minimal Distill site of our own. 
-
-Just like we did with the R Markdown site, we use the build tab to knit all our files at once.
-
-This creates a `_site` folder for our HTML files.
 
 ---
 background-image: url(images/clouds.jpg)
@@ -1217,9 +1226,9 @@ Quick things to notice -- let's look inside.
 
 ---
 class: middle
-background-image: url("images/rawpixel/bunch-balloons-rmd1.jpg")
+background-image: url(images/hello-index.jpg)
 background-position: right
-background-size: contain
+background-size: 60%
 
 
 .left-column[
@@ -1227,7 +1236,6 @@ background-size: contain
 ```r
 .
 ├── DataViz.Rproj
-├── _site/
 ├── _site.yml 
 *└── index.Rmd
 ```
@@ -1242,11 +1250,6 @@ It will be the site's home page.
 Any existing R Markdown document you have will do.
 
 But there is one addition we make inside of this file. 
-
----
-name: index
-background-image: url(images/hello-index.jpg)
-background-size: 50%
 
 ---
 background-image: url(images/clouds.jpg)
@@ -1302,7 +1305,6 @@ background-size: contain
 ```r
 .
 ├── DataViz.Rproj
-├── _site/
 *├── _site.yml
 ├── index.Rmd
 ├── lab01.Rmd
@@ -1327,7 +1329,6 @@ background-size: cover
 ```r
 .
 ├── DataViz.Rproj
-├── _site/
 *├── _site.yml
 ├── index.Rmd
 ├── lab01.Rmd
@@ -1364,6 +1365,34 @@ The YAML navbar keys here are all similar to what we used in an R Markdown site,
 The output **must** specify that this is a Distill article.
 
 ---
+## Build your site
+
+.left-column[
+
+
+```r
+.
+├── DataViz.Rproj
+*├── _site/
+├── _site.yml 
+└── index.Rmd 
+```
+]
+
+.right-column[
+&lt;img src="images/build-distill.png" style="margin-top: -28px;"&gt;
+]
+
+
+???
+
+So now let's build a minimal Distill site of our own. 
+
+Just like we did with the R Markdown site, we use the build tab to knit all our files at once.
+
+This creates a `_site` folder for our HTML files.
+
+---
 class: inverse, middle, center
 background-color: #e6f3fc
 
@@ -1374,12 +1403,24 @@ name: yt2
 class: inverse, middle
 background-color: #e6f3fc
 
-# Your turn #3
+# Your turn # 2
 
-Let's add a xaringan slide deck to our distill site, and link to it from the `index.Rmd`.
+Let's add a xaringan slide deck to our distill site (see `_site.yml` below), and link to it from the `index.Rmd`.
 
-<div class="countdown" id="timer_5f3e98da" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+```yaml
+---
+output_dir: docs
+include: slides/
+---
+```
+
+Do we have time? Are we feeling brave? Permission to deploy??
+
+
+
+
+<div class="countdown" id="timer_5f3eaf0a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
 ---
@@ -1397,7 +1438,7 @@ class: middle
 
 + Can have [blog-like collections](https://rstudio-education.github.io/sharing-short-notice/#103)
 
-+ 😞 Less flexible than a Hugo site (example [here](https://share-blogdown.netlify.app/))
++ 😢 Less flexible than a Hugo site (example [here](https://share-blogdown.netlify.app/))
 
 + 🎉 Less dependencies than a Hugo site
 

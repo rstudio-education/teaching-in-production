@@ -15,6 +15,24 @@ site: distill::distill_website
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+```{r meta, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_general(
+    description = "Make your teaching more robust & reproducible with R Markdown",
+    generator = "xaringan and remark.js"
+  ) %>% 
+  meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
+  meta_social(
+    title = "Teaching in production",
+    url = "https://rstd.io/tip",
+    image = "https://rstudio-education.github.io/teaching-in-production/images/logo.png",
+    image_alt = "R Markdown hedgehog by Allison Horst",
+    og_type = "website",
+    twitter_card_type = "summary_large_image"
+  )
+```
+
 ## Welcome  
 
 These are the materials for an invited session for Day 3 of the RStudio Instructor Training and Certification Program, by Dr. Alison Presmanes Hill.
