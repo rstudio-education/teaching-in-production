@@ -24,9 +24,9 @@ meta() %>%
   ) %>% 
   meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
   meta_social(
-    title = "Teaching in production",
+    title = "Teaching in Production",
     url = "https://rstd.io/tip",
-    image = "https://rstudio-education.github.io/teaching-in-production/images/logo.png",
+    image = "https://repository-images.githubusercontent.com/288797104/d13f1700-e2cc-11ea-9ed7-0bf3a41af1e4",
     image_alt = "R Markdown hedgehog by Allison Horst",
     og_type = "website",
     twitter_card_type = "summary_large_image"

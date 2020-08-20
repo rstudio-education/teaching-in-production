@@ -83,7 +83,7 @@ meta() %>%
   meta_social(
     title = "Teaching in production",
     url = "https://rstd.io/tip",
-    image = "https://rstudio-education.github.io/teaching-in-production/images/logo.png",
+    image = "https://repository-images.githubusercontent.com/288797104/d13f1700-e2cc-11ea-9ed7-0bf3a41af1e4",
     image_alt = "R Markdown hedgehog by Allison Horst",
     og_type = "website",
     twitter_card_type = "summary_large_image"
@@ -772,7 +772,7 @@ Why? Don't repeat yourself!
 1. Plot first, code second
 
     - Chunk 1: `` {r plot-first, echo = FALSE} ``
-    - Chunk 2: `` {r ref.label = 'plot-first', eval = FALSE} ``
+    - Chunk 2: `` {r ref.label = 'plot-first', fig.show = 'hide'} ``
 
 
 ---
@@ -841,7 +841,7 @@ code goes here
 ```
 ]
 .pull-right[
-```{r ref.label = 'plot-first', eval = FALSE}`r ''`
+```{r ref.label = 'plot-first', fig.show = 'hide'}`r ''`
 ```
 ]
 ````
@@ -859,7 +859,7 @@ code goes here
 
 .pull-right[
 
-```{r ref.label = 'plot-last', eval = FALSE}
+```{r ref.label = 'plot-last', fig.show = 'hide'}
 ```
 ]
 ]
@@ -1384,6 +1384,13 @@ class: inverse, middle, center
 background-color: #e6f3fc
 
 # distill demo
+
+```{r eval=FALSE}
+distill::create_website(dir = ".", 
+                        title = "penguin-eda",
+                        gh_pages = TRUE)
+```
+
 
 ---
 name: yt2

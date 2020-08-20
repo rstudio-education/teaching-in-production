@@ -15,13 +15,13 @@
     <meta name="twitter:title" content="Teaching in production"/>
     <meta name="twitter:description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="twitter:url" content="https://rstd.io/tip"/>
-    <meta name="twitter:image:src" content="https://rstudio-education.github.io/teaching-in-production/images/logo.png"/>
+    <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/288797104/d13f1700-e2cc-11ea-9ed7-0bf3a41af1e4"/>
     <meta name="twitter:image:alt" content="R Markdown hedgehog by Allison Horst"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="og:title" content="Teaching in production"/>
     <meta name="og:description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="og:url" content="https://rstd.io/tip"/>
-    <meta name="og:image" content="https://rstudio-education.github.io/teaching-in-production/images/logo.png"/>
+    <meta name="og:image" content="https://repository-images.githubusercontent.com/288797104/d13f1700-e2cc-11ea-9ed7-0bf3a41af1e4"/>
     <meta name="og:image:alt" content="R Markdown hedgehog by Allison Horst"/>
     <meta name="og:type" content="website"/>
     <meta name="og:locale" content="en_US"/>
@@ -721,7 +721,7 @@ Try:
 + [Two columns](https://arm.rbind.io/slides/xaringan.html#66)
 + Highlight [code input](https://arm.rbind.io/slides/xaringan.html#78) or [output](https://arm.rbind.io/slides/xaringan.html#79)
 
-<div class="countdown" id="timer_5f3eb21d" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5f3edfd8" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -773,7 +773,7 @@ Why? Don't repeat yourself!
 1. Plot first, code second
 
     - Chunk 1: `` {r plot-first, echo = FALSE} ``
-    - Chunk 2: `` {r ref.label = 'plot-first', eval = FALSE} ``
+    - Chunk 2: `` {r ref.label = 'plot-first', fig.show = 'hide'} ``
 
 
 ---
@@ -840,7 +840,7 @@ code goes here
 ```
 ]
 .pull-right[
-```{r ref.label = 'plot-first', eval = FALSE}
+```{r ref.label = 'plot-first', fig.show = 'hide'}
 ```
 ]
 ````
@@ -1398,6 +1398,14 @@ background-color: #e6f3fc
 
 # distill demo
 
+
+```r
+distill::create_website(dir = ".", 
+                        title = "penguin-eda",
+                        gh_pages = TRUE)
+```
+
+
 ---
 name: yt2
 class: inverse, middle
@@ -1419,7 +1427,7 @@ Do we have time? Are we feeling brave? Permission to deploy??
 
 
 
-<div class="countdown" id="timer_5f3eaf0a" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5f3ee0c9" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
