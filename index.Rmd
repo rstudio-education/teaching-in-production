@@ -31,10 +31,16 @@ We assume that you have knit an R Markdown document before, but you don’t need
 
 + GitHub via the RStudio IDE. 
 
+
+
+
 <aside>You won't have to use GitHub for the session, but many of tools we'll use integrate nicely with version control via GitHub. To get started, complete these [installation instructions](https://happygitwithr.com/install-intro.html), then test your connection between GitHub and RStudio following [these steps](https://happygitwithr.com/connect-intro.html).^[We *strongly recommend* that if you are not already a fluent GitHub user you choose [HTTPS over SSH](https://happygitwithr.com/credential-caching.html).]. </aside>
 
+You'll also need to install the following packages:
 
-
+```{r eval=FALSE, echo=TRUE}
+install.packages(c("xaringan", "distill", "palmerpenguins"))
+```
 
 
 \
