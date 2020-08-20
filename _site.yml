@@ -4,6 +4,7 @@ favicon: images/favicon.ico
 description: |
   Invited session for Day 3 of the RStudio Instructor Training and Certification Program.
 output_dir: "docs"
+include: ["slides/"]
 creative_commons: CC BY-SA
 repository_url: https://github.com/rstudio-education/teaching-in-production
 navbar:

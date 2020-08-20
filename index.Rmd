@@ -47,7 +47,7 @@ install.packages(c("xaringan", "distill", "palmerpenguins"))
 
 ## Links
 
-+ [Slides]()
++ [Slides](slides/index.html)
 + [Website](https://rstd.io/tip)
 
 ## Acknowledgments {.appendix}
