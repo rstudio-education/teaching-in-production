@@ -1,24 +1,41 @@
 ---
 title: "Teaching in Production"
+author:
+- name: Alison Hill, Ph.D.
+  url: https://alison.rbind.io
+  affiliation: RStudio
+  affiliation_url: https://rstudio.com
+date: "`r Sys.Date()`"
 description: |
   Day 3 of the RStudio Instructor Training and Certification Program.
-author:
-  - name: Alison Hill, Ph.D.
-    url: https://alison.rbind.io
-    affiliation: RStudio
-    affiliation_url: https://rstudio.com
-date: "`r Sys.Date()`"
-site: 
-  distill::distill_website
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Welcome  
+## Welcome  
 
 These are the materials for an invited session for Day 3 of the RStudio Instructor Training and Certification Program, by Dr. Alison Presmanes Hill.
+
+\
+
+## Prework
+
+We assume that you have knit an R Markdown document before, but you don’t need to be an advanced R Markdown user to participate! You'll get the most out of this session if you are familiar with: 
+
++ the basics of R Markdown^[see <https://rmarkdown.rstudio.com/lesson-1.html> for a refresher],
+
++ the RStudio Integrated Development Environment (IDE), and
+
++ GitHub via the RStudio IDE. 
+
+<aside>You won't have to use GitHub for the session, but many of tools we'll use integrate nicely with version control via GitHub. To get started, complete these [installation instructions](https://happygitwithr.com/install-intro.html), then test your connection between GitHub and RStudio following [these steps](https://happygitwithr.com/connect-intro.html).^[We *strongly recommend* that if you are not already a fluent GitHub user you choose [HTTPS over SSH](https://happygitwithr.com/credential-caching.html).]. </aside>
+
+
+
+
 
 \
 

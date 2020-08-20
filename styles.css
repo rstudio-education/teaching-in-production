@@ -150,3 +150,32 @@ d-byline h3,
 d-appendix p {
 	font-size: 0.9rem;
 }
+
+/*----- COLORED LIST BULLET----*/
+
+d-article ul {
+  list-style: none; /* Remove default bullets */
+}
+
+d-article ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #79beee; /* Change the color */
+  font-weight: normal; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1.5em; /* Also needed for space (tweak if needed) */
+  margin-left: -1.5em; /* Also needed for space (tweak if needed) */
+}
+
+d-article ul > li > p {
+  display: inline; /* to have content show up next to bullet */
+  line-height: 1.6em;
+}
+
+d-article ul > li { /*to add back in space between bullet items that I took away by making p display inline */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.d-toc ul li::before {
+  content: " ";  /* Remove toc bullets */
+}
