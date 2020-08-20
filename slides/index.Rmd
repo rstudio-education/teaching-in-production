@@ -76,15 +76,15 @@ background-size: cover
 library(metathis)
 meta() %>%
   meta_general(
-    description = "Make your teaching more robust & reproducible",
+    description = "Make your teaching more robust & reproducible with R Markdown",
     generator = "xaringan and remark.js"
   ) %>% 
   meta_name("github-repo" = "rstudio-education/teaching-in-production") %>% 
   meta_social(
     title = "Teaching in production",
     url = "https://rstd.io/tip",
-    image = "https://repository-images.githubusercontent.com/248553842/408a8d80-7363-11ea-96ae-d04b664002df",
-    image_alt = "The first slide features a flying machine",
+    image = "https://rstudio-education.github.io/teaching-in-production/images/logo.png",
+    image_alt = "R Markdown hedgehog by Allison Horst",
     og_type = "website",
     twitter_card_type = "summary_large_image"
   )
@@ -1044,6 +1044,8 @@ class: center, middle
 `r emo::ji("package")` [flair](https://kbodwin.github.io/flair/index.html)
 
 `r emo::ji("package")` [ymlthis](https://ymlthis.r-lib.org/)
+
+`r emo::ji("package")` [metathis](https://pkg.garrickadenbuie.com/metathis/)
 
 ---
 background-image: url(images/ship.jpg)
