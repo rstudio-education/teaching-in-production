@@ -37,10 +37,9 @@ meta() %>%
 
 These are the materials for an invited session for Day 3 of the RStudio Instructor Training and Certification Program, by Dr. Alison Presmanes Hill.
 
-```{r, fig.cap="[Slides](slides/index.html)"}
-knitr::include_url("slides/index.html")
+```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
+xaringanExtra::embed_xaringan(url = "slides/index.html", ratio = "16:9")
 ```
-
 \
 
 ## Prework

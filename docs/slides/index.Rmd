@@ -33,6 +33,10 @@ library(tidyverse)
 library(xaringanExtra)
 library(palmerpenguins)
 xaringanExtra::use_panelset()
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(
+  share_buttons = c("twitter", "linkedin", "pocket")
+)
 ```
 
 class: title-slide, center, bottom
