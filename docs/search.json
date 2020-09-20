@@ -1,0 +1,19 @@
+{
+  "articles": [
+    {
+      "path": "index.html",
+      "title": "Teaching in Production",
+      "description": "Day 3 of the RStudio Instructor Training and Certification Program.\n",
+      "author": [
+        {
+          "name": "Alison Hill, Ph.D.",
+          "url": "https://alison.rbind.io"
+        }
+      ],
+      "date": "`r Sys.Date()`",
+      "contents": "\n\nContents\nWelcome\nPrework\nLinks\nAcknowledgments\n\n\n\n\nWelcome\nThese are the materials for an invited session for Day 3 of the RStudio Instructor Training and Certification Program, by Dr. Alison Presmanes Hill.\n\n\n\nfitvids('.shareagain', {players: 'iframe'});\n\n\nPrework\nWe assume that you have knit an R Markdown document before, but you don’t need to be an advanced R Markdown user to participate! You’ll get the most out of this session if you are familiar with:\nthe basics of R Markdown1,\nthe RStudio Integrated Development Environment (IDE), and\nGitHub via the RStudio IDE.\n\nYou won’t have to use GitHub for the session, but many of tools we’ll use integrate nicely with version control via GitHub. To get started, complete these installation instructions, then test your connection between GitHub and RStudio following these steps.2.\nYou’ll also need to install the following packages:\n\n\ninstall.packages(c(\"xaringan\", \"distill\", \"palmerpenguins\"))\n\n\n\n\nLinks\nLink to this website: https://rstd.io/tip\nSlides\nAcknowledgments\nThis is website made with the distill package and a custom theme by Alison Hill & Desirée De Leon.\n\nsee https://rmarkdown.rstudio.com/lesson-1.html for a refresher↩︎\nWe strongly recommend that if you are not already a fluent GitHub user you choose HTTPS over SSH.↩︎\n",
+      "last_modified": "2020-09-20T16:43:00-04:00"
+    }
+  ],
+  "collections": []
+}

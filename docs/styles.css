@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i|PT+Sans:400,400i,700,700i|PT+Mono:400,400i,700,700i&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
+
 @import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=DM+Mono&display=swap');
 
 body {
   font-family: "Sen";
@@ -28,6 +29,11 @@ d-article h2 {
 	font-weight: 300;
 }
 
+d-article div.sourceCode code, 
+d-article pre code {
+	font-family: "DM Mono", monospace;
+	font-size: 1rem;
+}
 
 /* --------------Navbar-------------------- */
 
