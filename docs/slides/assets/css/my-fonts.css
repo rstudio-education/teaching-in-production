@@ -1,28 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Mono&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300,400,500,900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:300,400,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
 body { 
-  font-family: 'Sen', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   color: #282a36;
 }
 
 h1 {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Libre Baskerville', serif;
   font-weight: 500;
   color: #096B72;
 }
 
 h2 {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Libre Baskerville', serif;
   font-weight: 300;
   color: #023d4d;
 }
 
 h3 {
-  font-family: 'Sen', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 300;
   color: #023d4d;
@@ -30,7 +30,7 @@ h3 {
 }
 
 h4, h5, h6 {
-  font-family: 'Sen', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   color: #003366;
 }
@@ -42,6 +42,6 @@ h4, h5, h6 {
 
 @media print {
   body {
-    font-family: 'Sen', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 400;
 }

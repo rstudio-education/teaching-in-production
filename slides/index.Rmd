@@ -70,7 +70,7 @@ background-size: cover
 
 ```{css, echo=FALSE}
 .panelset {
-  --panel-tab-font-family: Sen;
+  --panel-tab-font-family: Work Sans;
   --panel-tab-background-color-active: #fffbe0;
   --panel-tab-border-color-active: #023d4d;
 }

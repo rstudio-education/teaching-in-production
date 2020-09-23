@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP:300, 300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:300, 300i&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=DM+Mono&display=swap');
 
 body {
-  font-family: "Sen";
+  font-family: "Work Sans";
   /*color: #1f1f1f;*/
   color: #405359;
   font-size: 16px;
@@ -13,7 +13,7 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Noto Serif JP";
+  font-family: "Libre Baskerville";
   letter-spacing: 2px;
   line-height: 2rem; /* increases, so wrapping headers don't overlap */ 
   color: #096B72;
@@ -44,7 +44,7 @@ d-article pre code {
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255,255,255,0.5));   
   background-color: transparent;
   font-size: 15px;
-  font-family: "Noto Serif JP";
+  font-family: "Libre Baskerville";
   letter-spacing: 2px;
   text-transform: uppercase;
 }

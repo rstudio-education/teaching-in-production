@@ -175,7 +175,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 
 
 .title-slide h1 {
-  font-family: 'Noto Serif JP', serif;
+  font-family: 'Libre Baskerville', serif;
   color: #096B72;
   font-size: 3em;
   word-wrap: break-word;
@@ -185,7 +185,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .title-slide h2 {
-  font-family: 'Sen', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 1.35em;
   color: #3b4245;
@@ -195,7 +195,7 @@ thead, tfoot, tr:nth-child(even) { background: #eee }
 }
 
 .title-slide h3 {
-  font-family: 'Sen', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 1.3em;
   color: #3b4245;
@@ -535,7 +535,7 @@ h4 {
 }
 
 .word-bubble {
-  font-family: 'Noto Serif JP';
+  font-family: 'Libre Baskerville';
   font-size: 1.2em;
 }
 
