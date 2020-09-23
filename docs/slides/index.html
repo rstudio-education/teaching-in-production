@@ -4,7 +4,7 @@
     <title>Teaching in Production</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Alison Presmanes Hill" />
-    <meta name="date" content="2020-08-22" />
+    <meta name="date" content="2020-09-22" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
@@ -14,6 +14,11 @@
     <script src="libs/shareon/shareon.min.js"></script>
     <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
     <meta name="description" content="Make your teaching more robust &amp; reproducible with R Markdown"/>
     <meta name="generator" content="xaringan and remark.js"/>
     <meta name="github-repo" content="rstudio-education/teaching-in-production"/>
@@ -38,6 +43,8 @@
   </head>
   <body>
     <textarea id="source">
+
+
 
 
 
@@ -214,6 +221,12 @@ Maybe sometimes too hard.
 
 ---
 class: center
+background-image: url("images/rmd_flowchart.png")
+background-size: contain
+background-color: #f6f6f6
+
+---
+class: center
 background-image: url("images/lesson-time.jpg")
 background-size: contain
 background-color: #f6f6f6
@@ -258,7 +271,7 @@ penguins %&gt;%
 ```r
 penguins %&gt;% 
   dplyr::n_distinct(species)
-## Error in FUN(X[[i]], ...): object 'species' not found
+## Error in list2(...): object 'species' not found
 ```
 ]
 
@@ -305,7 +318,7 @@ penguins %&gt;%
 ## Error: Problem with `summarise()` input `..1`.
 ## x argument "x" is missing, with no default
 ## ℹ Input `..1` is `across(where(is.numeric), mean(na.rm = TRUE))`.
-## ℹ The error occured in group 1: species = "Adelie".
+## ℹ The error occurred in group 1: species = "Adelie".
 ```
 ]
 
@@ -528,6 +541,11 @@ class: top, center
 
 # It's all R Markdown
 
+---
+background-image: url(images/rmarkdown_hedgehog_wide.png)
+background-size: contain
+background-position: middle, center
+
 
 ---
 class: bottom, center
@@ -726,7 +744,7 @@ Try:
 + [Two columns](https://arm.rbind.io/slides/xaringan.html#66)
 + Highlight [code input](https://arm.rbind.io/slides/xaringan.html#78) or [output](https://arm.rbind.io/slides/xaringan.html#79)
 
-<div class="countdown" id="timer_5f418213" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5f6aaded" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 
@@ -1398,10 +1416,10 @@ Just like we did with the R Markdown site, we use the build tab to knit all our 
 This creates a `_site` folder for our HTML files.
 
 ---
-class: inverse, middle, center
+class: inverse, middle
 background-color: #e6f3fc
 
-# distill demo
+# &lt;center&gt;distill demo&lt;/center&gt;
 
 
 ```r
@@ -1432,7 +1450,7 @@ Do we have time? Are we feeling brave? Permission to deploy??
 
 
 
-<div class="countdown" id="timer_5f4181f1" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_5f6aad63" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 

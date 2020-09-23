@@ -39,6 +39,10 @@ xaringanExtra::style_share_again(
 )
 ```
 
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
+
 class: title-slide, center, bottom
 
 # `r rmarkdown::metadata$title`
@@ -224,6 +228,12 @@ class: middle, center
 ???
 
 Maybe sometimes too hard.
+
+---
+class: center
+background-image: url("images/rmd_flowchart.png")
+background-size: contain
+background-color: #f6f6f6
 
 ---
 class: center
@@ -526,6 +536,11 @@ background-position: middle, center
 class: top, center
 
 # It's all R Markdown
+
+---
+background-image: url(images/rmarkdown_hedgehog_wide.png)
+background-size: contain
+background-position: middle, center
 
 
 ---
@@ -1384,10 +1399,10 @@ Just like we did with the R Markdown site, we use the build tab to knit all our 
 This creates a `_site` folder for our HTML files.
 
 ---
-class: inverse, middle, center
+class: inverse, middle
 background-color: #e6f3fc
 
-# distill demo
+# <center>distill demo</center>
 
 ```{r eval=FALSE}
 distill::create_website(dir = ".", 
